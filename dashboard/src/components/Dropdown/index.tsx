@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import {Link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 
 const Dropdown = ({ item }: any) => {
       const [isListOpen, setIsListOpen] = useState<boolean>(false);
@@ -12,10 +12,10 @@ const Dropdown = ({ item }: any) => {
       }
     >
       <div className="flex items-center justify-between text-[#101010] font-medium">
-        <Link to={item.path} className="flex items-center">
+        <NavLink to={item.path} className="flex items-center">
           <img src={item.icon} alt="icon" className="mr-3" />
           {item.name}
-        </Link>
+        </NavLink>
         {item.subNav && isListOpen ? (
          <MdKeyboardArrowUp onClick={() => setIsListOpen(false)}/>
         ) : item.subNav ? (
@@ -26,7 +26,7 @@ const Dropdown = ({ item }: any) => {
         item.subNav.map((list: any, index: any) => (
           <ul key={index}>
             <li className="my-3 ml-8 text-[#101010]">
-              <Link to={list.path}>{list.title}</Link>
+              <NavLink to={list.path}>{list.title}</NavLink>
             </li>
           </ul>
         ))}

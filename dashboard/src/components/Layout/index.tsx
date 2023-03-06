@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProp) => {
       <Sidebar />
       <div className="w-full bg-dashboardBg min-h-full">
         <Navbar />
-        <div className="ml-310">{children}</div>
+        <div className=" " >{children}</div>
       </div>
     </div>
     <Outlet />

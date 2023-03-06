@@ -51,7 +51,7 @@ export default function InputField({
         {prefix && <span className="pl-2">&#8358;</span>}
         { phonePrefix && <span className="pl-2">+234</span>}
         <input
-          // {...register(name, { required })}
+          {...register(name, { required })}
           placeholder={placeholder}
           className="rounded-lg outline-none flex-1 pl-2 px-3 py-1 bg-transparent"
           name={name}

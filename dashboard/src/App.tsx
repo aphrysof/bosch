@@ -13,8 +13,12 @@ import Table from "customers/Table";
 import Loans from "loans/Loans"
 import Fulfilment from "credit/Fulfilment"
 import Defaulters from "credit/Defaulters"
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const App = () => {
+
+
   return (
     //  <RouterProvider router={router} />
     <Routes>
@@ -36,9 +40,10 @@ const App = () => {
   );
 };
 ReactDOM.render(
+   <Provider store={store}>
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("app")
 );

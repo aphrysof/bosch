@@ -79,6 +79,6 @@ export interface IHookInputProps {
 export interface ILogin {
   username: string
   password: string
-  router?: any
+  navigate?: any
 }
 
